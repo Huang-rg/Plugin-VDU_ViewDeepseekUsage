@@ -1,0 +1,59 @@
+{
+  "name": "dsh-usage-browser",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Global DeepSeek usage panel for DeepSeek Harness: a button in the window title bar (right of the app menu), a 16:9 resizable in-app browser panel that survives session switching, and a user-configurable shortcut.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "usage",
+    "panel",
+    "webview",
+    "shortcut"
+  ],
+  "engines": {
+    "node": ">=20.18"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "docs/*.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.2 <0.3.0",
+      "node": ">=20.18",
+      "profiles": [
+        "desktop",
+        "web"
+      ]
+    }
+  }
+}

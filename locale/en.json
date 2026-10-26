@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Usage Panel",
+    "description": "Adds a Usage button right of the window menu's Apply/Edit items that opens platform.deepseek.com/usage in a global in-app panel. The panel belongs to no session, so switching sessions never closes it, it shares sign-in state with the right-sidebar browser, and its open shortcut is user-configurable."
+  }
+}

@@ -1,0 +1,5 @@
+# Bundle patch: one Host row named after the package. The Client half is
+# declared by package.json's dsh.client section and owns all rendering.
+- insert:
+    - id: usage-browser
+      name: 'dsh-usage-browser'
